@@ -4,53 +4,35 @@ import { motion } from 'framer-motion'
 const Flights: React.FC = () => {
   const flightOptions = [
     {
-      airline: "Avianca",
-      route: "Miami (MIA) → Bogotá (BOG)",
-      departure: "12 de Marzo, 2025",
-      departureTime: "11:30 PM",
-      arrival: "5:45 AM +1",
-      duration: "4h 15min",
-      price: "Desde $350 USD",
-      notes: "Vuelo directo nocturno, llega temprano"
+      airline: "VUELOS DE IDA",
+      route: "SJU A BOG JUEVES 12, 2025",
+      departure: "OPCION 1:",
+      departureTime: "1:05PM",
+      arrival: "LLEGANDO A LAS 3PM",
+      duration: "",
+      price: "",
+      notes: ""
     },
     {
-      airline: "Avianca",
-      route: "Nueva York (JFK) → Bogotá (BOG)",
-      departure: "12 de Marzo, 2025",
-      departureTime: "10:15 PM",
-      arrival: "5:30 AM +1",
-      duration: "6h 15min",
-      price: "Desde $420 USD",
-      notes: "Vuelo directo desde la costa este"
-    },
-    {
-      airline: "Avianca",
-      route: "Los Angeles (LAX) → Bogotá (BOG)",
-      departure: "12 de Marzo, 2025",
-      departureTime: "11:45 PM",
-      arrival: "11:30 AM +1",
-      duration: "8h 45min",
-      price: "Desde $480 USD",
-      notes: "Vuelo directo desde la costa oeste"
+      airline: "",
+      route: "",
+      departure: "OPCION 2:",
+      departureTime: "5:05PM",
+      arrival: "LLEGANDO A LAS 7:55PM",
+      duration: "",
+      price: "",
+      notes: ""
     }
   ]
 
   const returnFlights = [
     {
-      airline: "Avianca",
-      route: "Bogotá (BOG) → Miami (MIA)",
-      departure: "15 de Marzo, 2025",
-      departureTime: "7:30 AM",
-      arrival: "12:45 PM",
-      duration: "4h 15min"
-    },
-    {
-      airline: "Avianca",
-      route: "Bogotá (BOG) → Nueva York (JFK)",
-      departure: "15 de Marzo, 2025",
-      departureTime: "8:15 AM",
-      arrival: "4:30 PM",
-      duration: "6h 15min"
+      airline: "VUELOS DE VUELTA",
+      route: "BOG A SJU DOMINGO 15 DE MARZO 2025",
+      departure: "OPCION 1:",
+      departureTime: "12:50 PM",
+      arrival: "LLEGANDO A LAS 4:40PM",
+      duration: ""
     }
   ]
 
@@ -87,54 +69,33 @@ const Flights: React.FC = () => {
           className="mb-16"
         >
           <h3 className="font-serif text-3xl text-charcoal mb-8 text-center">
-            Vuelos de Llegada
+            Vuelos de Ida
           </h3>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {flightOptions.map((flight, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="font-serif text-xl text-charcoal">{flight.airline}</h4>
-                  <span className="text-2xl">✈️</span>
+          <div className="max-w-2xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-lg p-8 shadow-lg"
+            >
+              <div className="text-center mb-6">
+                <h4 className="font-serif text-2xl text-charcoal mb-2">VUELOS DE IDA</h4>
+                <p className="text-lg text-charcoal font-medium">SJU A BOG JUEVES 12, 2025</p>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-3 border-b border-gray-200">
+                  <span className="font-medium text-charcoal">OPCION 1:</span>
+                  <span className="text-charcoal">1:05PM LLEGANDO A LAS 3PM</span>
                 </div>
-                
-                <div className="space-y-3 mb-4">
-                  <div>
-                    <p className="font-medium text-charcoal">{flight.route}</p>
-                    <p className="text-sm text-gray-600">{flight.departure}</p>
-                  </div>
-                  
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <p className="text-sm text-gray-600">Salida</p>
-                      <p className="font-medium text-charcoal">{flight.departureTime}</p>
-                    </div>
-                    <div className="text-center">
-                      <p className="text-sm text-gray-600">Duración</p>
-                      <p className="font-medium text-charcoal">{flight.duration}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-sm text-gray-600">Llegada</p>
-                      <p className="font-medium text-charcoal">{flight.arrival}</p>
-                    </div>
-                  </div>
+                <div className="flex justify-between items-center py-3">
+                  <span className="font-medium text-charcoal">OPCION 2:</span>
+                  <span className="text-charcoal">5:05PM LLEGANDO A LAS 7:55PM</span>
                 </div>
-                
-                <div className="border-t border-gray-200 pt-4">
-                  <p className="font-serif text-lg text-rose font-medium mb-2">
-                    {flight.price}
-                  </p>
-                  <p className="text-sm text-gray-600">{flight.notes}</p>
-                </div>
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>
           </div>
         </motion.div>
 
@@ -147,47 +108,29 @@ const Flights: React.FC = () => {
           className="mb-12"
         >
           <h3 className="font-serif text-3xl text-charcoal mb-8 text-center">
-            Vuelos de Regreso Sugeridos
+            Vuelos de Vuelta
           </h3>
           
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {returnFlights.map((flight, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg p-6 shadow-lg"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="font-serif text-xl text-charcoal">{flight.airline}</h4>
-                  <span className="text-2xl">🛫</span>
+          <div className="max-w-2xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white rounded-lg p-8 shadow-lg"
+            >
+              <div className="text-center mb-6">
+                <h4 className="font-serif text-2xl text-charcoal mb-2">VUELOS DE VUELTA</h4>
+                <p className="text-lg text-charcoal font-medium">BOG A SJU DOMINGO 15 DE MARZO 2025</p>
+              </div>
+
+              <div className="text-center py-4">
+                <div className="flex justify-between items-center">
+                  <span className="font-medium text-charcoal">OPCION 1:</span>
+                  <span className="text-charcoal">12:50 PM LLEGANDO A LAS 4:40PM</span>
                 </div>
-                
-                <div className="space-y-3">
-                  <div>
-                    <p className="font-medium text-charcoal">{flight.route}</p>
-                    <p className="text-sm text-gray-600">{flight.departure}</p>
-                  </div>
-                  
-                  <div className="flex justify-between items-center">
-                    <div>
-                      <p className="text-sm text-gray-600">Salida</p>
-                      <p className="font-medium text-charcoal">{flight.departureTime}</p>
-                    </div>
-                    <div className="text-center">
-                      <p className="text-sm text-gray-600">Duración</p>
-                      <p className="font-medium text-charcoal">{flight.duration}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-sm text-gray-600">Llegada</p>
-                      <p className="font-medium text-charcoal">{flight.arrival}</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>
           </div>
         </motion.div>
 
