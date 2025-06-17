@@ -4,38 +4,35 @@ import { motion } from 'framer-motion'
 const Itinerary: React.FC = () => {
   const events = [
     {
-      date: "VIERNES 13 DE MARZO 2025",
+      date: "VIERNES 13 DE MARZO 2026",
       day: "Día 1",
       events: [
         {
-          time: "1:00 PM",
-          title: "WELCOME BRUNCH",
+          time: "1PM",
+          title: "WELCOME BRUNCH!",
           location: "LOCATION: --------",
-          description: "Brunch de bienvenida para todos nuestros invitados.",
-          icon: "🥂",
-          dresscode: "Casual elegante"
+          description: "",
+          icon: "🥂"
         }
       ]
     },
     {
-      date: "SÁBADO 14 DE MARZO 2025",
+      date: "SÁBADO 14 DE MARZO 2026",
       day: "Día 2",
       events: [
         {
-          time: "2:30 PM",
-          title: "RECOGIDA LOBBY HOTEL",
-          location: "LOBBY DE LOS HOTELES",
-          description: "Transporte desde el lobby de los hoteles hacia la hacienda.",
-          icon: "🚐",
-          dresscode: "Black Tie"
+          time: "2:30PM",
+          title: "RECOGIDO LOBBY HOTEL",
+          location: "",
+          description: "",
+          icon: "💍"
         },
         {
-          time: "3:30 PM",
-          title: "WEDDING DAY",
-          location: "HACIENDA LA BELLA TOSCANA",
-          description: "Ceremonia de boda y celebración en la hermosa Hacienda La Bella Toscana.",
-          icon: "💒",
-          dresscode: "Black Tie"
+          time: "",
+          title: "WEDDING DAY!",
+          location: "LOCATION: LA BELLA TOSCANA",
+          description: "",
+          icon: "💒"
         }
       ]
     }
@@ -61,7 +58,6 @@ const Itinerary: React.FC = () => {
             <div className="w-24 h-px bg-rose"></div>
           </div>
           <p className="text-lg text-charcoal max-w-2xl mx-auto">
-            Aquí está el cronograma completo de nuestra celebración de dos días. 
             ¡Prepárense para momentos inolvidables!
           </p>
         </motion.div>
@@ -108,33 +104,23 @@ const Itinerary: React.FC = () => {
                       
                       {/* Event Card */}
                       <div className="flex-1 bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                          <div className="flex items-center mb-2 md:mb-0">
-                            <span className="md:hidden text-2xl mr-3">{event.icon}</span>
-                            <div>
-                              <h4 className="font-serif text-xl text-charcoal font-medium">
-                                {event.title}
-                              </h4>
-                              <p className="text-charcoal font-medium">{event.time}</p>
-                            </div>
-                          </div>
-                          <div className="text-right">
-                            <p className="text-sm text-gray-600 mb-1">Vestimenta</p>
-                            <span className="inline-block bg-sage bg-opacity-20 text-charcoal px-3 py-1 rounded-full text-sm font-bold">
-                              {event.dresscode}
-                            </span>
+                        <div className="flex items-center mb-4">
+                          <span className="md:hidden text-2xl mr-3">{event.icon}</span>
+                          <div>
+                            <h4 className="font-serif text-xl text-charcoal font-medium">
+                              {event.title}
+                            </h4>
+                            {event.time && (
+                              <p className="text-charcoal font-medium">HORA: {event.time}</p>
+                            )}
                           </div>
                         </div>
-                        
-                        <div className="space-y-2">
-                          <div className="flex items-center text-charcoal">
-                            <span className="mr-2">📍</span>
-                            <span className="font-medium">{event.location}</span>
+
+                        {event.location && (
+                          <div className="text-charcoal font-medium">
+                            {event.location}
                           </div>
-                          <p className="text-charcoal leading-relaxed pl-6">
-                            {event.description}
-                          </p>
-                        </div>
+                        )}
                       </div>
                     </motion.div>
                   ))}

@@ -3,35 +3,21 @@ import { motion } from 'framer-motion'
 
 const DressCode: React.FC = () => {
   const colorPalette = [
-    { name: "Rosa Suave", color: "#E2CFC3", description: "Tonos rosados y nude" },
-    { name: "Verde Salvia", color: "#9CAF88", description: "Verdes suaves y naturales" },
-    { name: "Beige Cálido", color: "#F5E6D3", description: "Tonos tierra y beige" },
-    { name: "Azul Polvo", color: "#B8C5D1", description: "Azules suaves y pasteles" },
-    { name: "Lavanda", color: "#D4C5E8", description: "Morados claros y lavanda" }
+    { name: "Rosa Claro", color: "#F4C2C2", description: "Rosa suave y delicado" },
+    { name: "Rosa", color: "#E91E63", description: "Rosa vibrante" },
+    { name: "Coral", color: "#FF6B6B", description: "Coral cálido" },
+    { name: "Naranja", color: "#FF9800", description: "Naranja brillante" },
+    { name: "Azul Verdoso", color: "#4DB6AC", description: "Teal suave" },
+    { name: "Lavanda", color: "#CE93D8", description: "Púrpura claro" },
+    { name: "Púrpura", color: "#9C27B0", description: "Púrpura elegante" },
+    { name: "Beige", color: "#D7CCC8", description: "Beige natural" }
   ]
-
-  const dressCodeGuidelines = {
-    women: [
-      "Vestidos midi o largos elegantes",
-      "Colores suaves y románticos",
-      "Telas fluidas como chiffon o seda",
-      "Zapatos cómodos para caminar en arena",
-      "Accesorios delicados y naturales"
-    ],
-    men: [
-      "Traje ligero o guayabera elegante",
-      "Pantalones de lino o algodón",
-      "Camisa de manga larga o corta",
-      "Zapatos de cuero o mocasines",
-      "Corbata opcional, preferible sin corbata"
-    ]
-  }
 
   const avoidColors = [
     { name: "Negro", color: "#000000" },
     { name: "Blanco puro", color: "#FFFFFF" },
     { name: "Rojo intenso", color: "#DC2626" },
-    { name: "Naranja brillante", color: "#EA580C" }
+    { name: "Verde neón", color: "#00FF00" }
   ]
 
   return (
@@ -63,69 +49,6 @@ const DressCode: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Dress Code Guidelines */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          {/* For Women */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-blush rounded-lg p-8"
-          >
-            <div className="text-center mb-6">
-              <span className="text-4xl mb-4 block">👗</span>
-              <h3 className="font-serif text-2xl text-charcoal">Para Ellas</h3>
-            </div>
-            
-            <ul className="space-y-3">
-              {dressCodeGuidelines.women.map((guideline, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex items-start text-charcoal"
-                >
-                  <span className="w-2 h-2 bg-rose rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                  {guideline}
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-
-          {/* For Men */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-blush rounded-lg p-8"
-          >
-            <div className="text-center mb-6">
-              <span className="text-4xl mb-4 block">🤵</span>
-              <h3 className="font-serif text-2xl text-charcoal">Para Ellos</h3>
-            </div>
-            
-            <ul className="space-y-3">
-              {dressCodeGuidelines.men.map((guideline, index) => (
-                <motion.li
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex items-start text-charcoal"
-                >
-                  <span className="w-2 h-2 bg-sage rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                  {guideline}
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
-        </div>
-
         {/* Color Palette */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -138,7 +61,7 @@ const DressCode: React.FC = () => {
             Paleta de Colores Sugerida
           </h3>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             {colorPalette.map((color, index) => (
               <motion.div
                 key={index}

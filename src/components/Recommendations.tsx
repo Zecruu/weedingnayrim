@@ -160,42 +160,7 @@ const Recommendations: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Safety & Tips */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          viewport={{ once: true }}
-          className="grid md:grid-cols-2 gap-8"
-        >
-          <div className="bg-sage bg-opacity-10 rounded-lg p-6">
-            <h4 className="font-serif text-xl text-charcoal mb-4 flex items-center">
-              <span className="mr-2">🛡️</span>
-              Consejos de Seguridad
-            </h4>
-            <ul className="space-y-2 text-charcoal">
-              <li>• Mantengan sus pertenencias seguras</li>
-              <li>• Usen taxis oficiales o Uber</li>
-              <li>• Eviten mostrar objetos de valor</li>
-              <li>• Manténganse en grupos, especialmente de noche</li>
-              <li>• Tengan copias de documentos importantes</li>
-            </ul>
-          </div>
-          
-          <div className="bg-rose bg-opacity-10 rounded-lg p-6">
-            <h4 className="font-serif text-xl text-charcoal mb-4 flex items-center">
-              <span className="mr-2">💡</span>
-              Tips Útiles
-            </h4>
-            <ul className="space-y-2 text-charcoal">
-              <li>• La moneda local es el Peso Dominicano (DOP)</li>
-              <li>• Se acepta USD en muchos lugares</li>
-              <li>• Propina estándar: 10-15%</li>
-              <li>• WiFi disponible en hoteles y restaurantes</li>
-              <li>• Descarguen apps de traducción</li>
-            </ul>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   )
