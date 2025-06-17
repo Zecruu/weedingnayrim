@@ -8,8 +8,9 @@ const Hero: React.FC = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/images/NayrimAndSteven.png)',
-          filter: 'brightness(0.8)'
+          backgroundImage: 'url(/images/NayrimSteven.png)',
+          filter: 'brightness(0.9)',
+          backgroundPosition: 'center center'
         }}
       />
 
