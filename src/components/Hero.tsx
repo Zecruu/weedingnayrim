@@ -5,14 +5,14 @@ const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: 'url(/images/NayrimSteven.png)',
-          filter: 'brightness(0.9)',
-          backgroundPosition: 'center center'
-        }}
-      />
+      <div className="absolute inset-0">
+        <img
+          src="/images/NayrimSteven.png"
+          alt="Nayrim & Steven"
+          className="w-full h-full object-cover object-center"
+          style={{ filter: 'brightness(0.9)' }}
+        />
+      </div>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-20" />
