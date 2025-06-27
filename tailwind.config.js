@@ -7,14 +7,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        'blush': '#FAF6F2',
-        'charcoal': '#2F2F2F',
-        'rose': '#E2CFC3',
-        'sage': '#9CAF88',
+        'vintage-white': '#FFFFFF',
+        'vintage-black': '#000000',
+        'vintage-grey': '#4A4A4A',
+        'vintage-light-grey': '#E5E5E5',
+        'vintage-dark-grey': '#2A2A2A',
+        'vintage-gold': '#D4AF37',
+        'vintage-silver': '#C0C0C0',
+        'vintage-charcoal': '#333333',
       },
       fontFamily: {
         'serif': ['Playfair Display', 'serif'],
         'sans': ['Lato', 'sans-serif'],
+        'script': ['Dancing Script', 'cursive'],
       },
     },
   },

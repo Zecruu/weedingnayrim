@@ -39,27 +39,35 @@ const Itinerary: React.FC = () => {
   ]
 
   return (
-    <section className="section-padding bg-blush">
-      <div className="container-max">
-        {/* Header */}
+    <section className="section-padding bg-vintage-white relative">
+      {/* Vintage paper texture */}
+      <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-vintage-grey via-transparent to-vintage-dark-grey"></div>
+
+      <div className="container-max relative z-10">
+        {/* Vintage Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="font-serif text-4xl lg:text-5xl text-charcoal mb-6">
-            Itinerario
-          </h2>
-          <div className="flex justify-center mb-8">
-            <div className="w-24 h-px bg-rose"></div>
-            <div className="w-3 h-3 bg-rose rounded-full mx-4"></div>
-            <div className="w-24 h-px bg-rose"></div>
+          {/* Decorative vintage border */}
+          <div className="p-8 mx-auto max-w-2xl bg-vintage-grey shadow-lg">
+            <div className="border border-vintage-white/20 p-6">
+              <h2 className="font-serif text-5xl lg:text-6xl text-vintage-white mb-6 tracking-wide">
+                Itinerario
+              </h2>
+              <div className="flex justify-center mb-8">
+                <div className="w-16 h-px bg-vintage-white"></div>
+                <div className="w-2 h-2 bg-vintage-white mx-4 rotate-45"></div>
+                <div className="w-16 h-px bg-vintage-white"></div>
+              </div>
+              <p className="text-lg text-vintage-white max-w-xl mx-auto font-serif italic">
+                ¡Prepárense para momentos inolvidables!
+              </p>
+            </div>
           </div>
-          <p className="text-lg text-charcoal max-w-2xl mx-auto">
-            ¡Prepárense para momentos inolvidables!
-          </p>
         </motion.div>
 
         {/* Timeline */}
@@ -72,22 +80,22 @@ const Itinerary: React.FC = () => {
               transition={{ duration: 0.8, delay: dayIndex * 0.2 }}
               viewport={{ once: true }}
             >
-              {/* Day Header */}
-              <div className="text-center mb-12">
-                <div className="inline-block bg-rose text-white px-6 py-3 rounded-full mb-4">
-                  <span className="font-medium">{dayEvent.day}</span>
+              {/* Vintage Day Header */}
+              <div className="text-center mb-16">
+                <div className="inline-block bg-vintage-charcoal text-vintage-white px-8 py-4 shadow-lg mb-6">
+                  <span className="font-serif text-lg tracking-widest uppercase">{dayEvent.day}</span>
                 </div>
-                <h3 className="font-serif text-3xl text-charcoal">
+                <h3 className="font-serif text-4xl text-vintage-black tracking-wide">
                   {dayEvent.date}
                 </h3>
               </div>
 
-              {/* Events */}
+              {/* Vintage Events */}
               <div className="relative">
-                {/* Timeline Line */}
-                <div className="absolute left-8 top-0 bottom-0 w-px bg-rose opacity-30 hidden md:block"></div>
-                
-                <div className="space-y-8">
+                {/* Vintage Timeline Line */}
+                <div className="absolute left-10 top-0 bottom-0 w-0.5 bg-vintage-gold/40 hidden md:block"></div>
+
+                <div className="space-y-12">
                   {dayEvent.events.map((event, eventIndex) => (
                     <motion.div
                       key={eventIndex}
@@ -97,27 +105,33 @@ const Itinerary: React.FC = () => {
                       viewport={{ once: true }}
                       className="relative flex items-start"
                     >
-                      {/* Timeline Dot */}
-                      <div className="hidden md:flex items-center justify-center w-16 h-16 bg-white rounded-full border-4 border-rose shadow-lg flex-shrink-0 mr-8">
-                        <span className="text-2xl">{event.icon}</span>
+                      {/* Vintage Timeline Dot */}
+                      <div className="hidden md:flex items-center justify-center w-20 h-20 bg-vintage-grey shadow-xl flex-shrink-0 mr-10">
+                        <span className="text-3xl">{event.icon}</span>
                       </div>
-                      
-                      {/* Event Card */}
-                      <div className="flex-1 bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <div className="flex items-center mb-4">
-                          <span className="md:hidden text-2xl mr-3">{event.icon}</span>
+
+                      {/* Vintage Event Card */}
+                      <div className="flex-1 bg-vintage-grey shadow-xl p-8 relative">
+                        {/* Decorative corners */}
+                        <div className="absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 border-vintage-white/50"></div>
+                        <div className="absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 border-vintage-white/50"></div>
+                        <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 border-vintage-white/50"></div>
+                        <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 border-vintage-white/50"></div>
+
+                        <div className="flex items-center mb-6">
+                          <span className="md:hidden text-3xl mr-4">{event.icon}</span>
                           <div>
-                            <h4 className="font-serif text-xl text-charcoal font-medium">
+                            <h4 className="font-serif text-2xl text-vintage-white font-bold tracking-wide">
                               {event.title}
                             </h4>
                             {event.time && (
-                              <p className="text-charcoal font-medium">HORA: {event.time}</p>
+                              <p className="text-vintage-white font-serif text-lg mt-2">HORA: {event.time}</p>
                             )}
                           </div>
                         </div>
 
                         {event.location && (
-                          <div className="text-charcoal font-medium">
+                          <div className="text-vintage-white font-serif text-lg border-t border-vintage-white/30 pt-4">
                             {event.location}
                           </div>
                         )}
@@ -130,59 +144,70 @@ const Itinerary: React.FC = () => {
           ))}
         </div>
 
-        {/* Important Notes */}
+        {/* Vintage Important Notes */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="mt-16 bg-sage bg-opacity-10 rounded-lg p-8"
+          className="mt-20 bg-vintage-grey shadow-2xl p-10 relative"
         >
-          <h4 className="font-serif text-2xl text-charcoal mb-6 text-center">
+          {/* Vintage decorative elements */}
+          <div className="absolute -top-2 -left-2 w-8 h-8 bg-vintage-white rotate-45"></div>
+          <div className="absolute -top-2 -right-2 w-8 h-8 bg-vintage-white rotate-45"></div>
+          <div className="absolute -bottom-2 -left-2 w-8 h-8 bg-vintage-white rotate-45"></div>
+          <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-vintage-white rotate-45"></div>
+
+          <h4 className="font-serif text-3xl text-vintage-white mb-8 text-center tracking-wide">
             Notas Importantes
           </h4>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h5 className="font-medium text-charcoal mb-3 flex items-center">
-                <span className="mr-2">🚗</span>
+          <div className="flex justify-center mb-10">
+            <div className="w-20 h-px bg-vintage-gold"></div>
+            <div className="w-2 h-2 bg-vintage-gold mx-4 rotate-45"></div>
+            <div className="w-20 h-px bg-vintage-gold"></div>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="border-l-4 border-vintage-white/30 pl-6">
+              <h5 className="font-serif text-xl text-vintage-white mb-4 flex items-center">
+                <span className="mr-3 text-2xl">🚗</span>
                 Transporte
               </h5>
-              <p className="text-charcoal text-base">
+              <p className="text-vintage-white text-base leading-relaxed">
                 Proporcionaremos transporte desde los hoteles principales
                 a todos los eventos. Los horarios de recogida se compartirán
                 por WhatsApp.
               </p>
             </div>
-            
-            <div>
-              <h5 className="font-medium text-charcoal mb-3 flex items-center">
-                <span className="mr-2">📱</span>
+
+            <div className="border-l-4 border-vintage-white/30 pl-6">
+              <h5 className="font-serif text-xl text-vintage-white mb-4 flex items-center">
+                <span className="mr-3 text-2xl">📱</span>
                 Comunicación
               </h5>
-              <p className="text-charcoal text-base">
+              <p className="text-vintage-white text-base leading-relaxed">
                 Manténganse atentos a nuestro grupo de WhatsApp para
                 actualizaciones de último minuto y coordinación de actividades.
               </p>
             </div>
-            
-            <div>
-              <h5 className="font-medium text-charcoal mb-3 flex items-center">
-                <span className="mr-2">🌧️</span>
+
+            <div className="border-l-4 border-vintage-white/30 pl-6">
+              <h5 className="font-serif text-xl text-vintage-white mb-4 flex items-center">
+                <span className="mr-3 text-2xl">🌧️</span>
                 Plan B
               </h5>
-              <p className="text-charcoal text-base">
+              <p className="text-vintage-white text-base leading-relaxed">
                 En caso de lluvia, tenemos espacios cubiertos alternativos
                 para todos los eventos al aire libre.
               </p>
             </div>
-            
-            <div>
-              <h5 className="font-medium text-charcoal mb-3 flex items-center">
-                <span className="mr-2">🎁</span>
+
+            <div className="border-l-4 border-vintage-white/30 pl-6">
+              <h5 className="font-serif text-xl text-vintage-white mb-4 flex items-center">
+                <span className="mr-3 text-2xl">🎁</span>
                 Regalos
               </h5>
-              <p className="text-charcoal text-base">
+              <p className="text-vintage-white text-base leading-relaxed">
                 Su presencia es nuestro regalo más preciado. Si desean
                 obsequiarnos algo, habrá una mesa designada en la recepción.
               </p>

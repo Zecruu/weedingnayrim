@@ -21,7 +21,7 @@ const DressCode: React.FC = () => {
   ]
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-vintage-white">
       <div className="container-max">
         {/* Header */}
         <motion.div
@@ -31,21 +31,23 @@ const DressCode: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-serif text-4xl lg:text-5xl text-charcoal mb-6">
-            Dress to Impress
-          </h2>
-          <div className="flex justify-center mb-8">
-            <div className="w-24 h-px bg-rose"></div>
-            <div className="w-3 h-3 bg-rose rounded-full mx-4"></div>
-            <div className="w-24 h-px bg-rose"></div>
-          </div>
-          <div className="space-y-6">
-            <div className="bg-charcoal text-white px-8 py-4 rounded-lg inline-block">
-              <p className="text-xl font-bold tracking-wider">BLACK TIE EVENT</p>
+          <div className="bg-vintage-grey shadow-2xl p-8 mx-auto max-w-2xl">
+            <h2 className="font-script text-4xl lg:text-5xl text-vintage-white mb-6">
+              Dress to Impress
+            </h2>
+            <div className="flex justify-center mb-8">
+              <div className="w-24 h-px bg-vintage-white"></div>
+              <div className="w-3 h-3 bg-vintage-white rounded-full mx-4"></div>
+              <div className="w-24 h-px bg-vintage-white"></div>
             </div>
-            <p className="text-lg text-charcoal max-w-2xl mx-auto">
-              FORMAL ELEGANTE, COLORES SUGERIDOS
-            </p>
+            <div className="space-y-6">
+              <div className="bg-vintage-charcoal text-vintage-white px-8 py-4 inline-block">
+                <p className="text-xl font-bold tracking-wider">BLACK TIE EVENT</p>
+              </div>
+              <p className="text-lg text-vintage-white max-w-2xl mx-auto">
+                FORMAL ELEGANTE, COLORES SUGERIDOS
+              </p>
+            </div>
           </div>
         </motion.div>
 
@@ -57,28 +59,30 @@ const DressCode: React.FC = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="font-serif text-3xl text-charcoal text-center mb-8">
-            Paleta de Colores Sugerida
-          </h3>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-            {colorPalette.map((color, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div 
-                  className="w-20 h-20 rounded-full mx-auto mb-3 shadow-lg"
-                  style={{ backgroundColor: color.color }}
-                ></div>
-                <h4 className="font-medium text-charcoal mb-1">{color.name}</h4>
-                <p className="text-sm text-gray-600">{color.description}</p>
-              </motion.div>
-            ))}
+          <div className="bg-vintage-grey shadow-lg p-8">
+            <h3 className="font-serif text-3xl text-vintage-white text-center mb-8">
+              Paleta de Colores Sugerida
+            </h3>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+              {colorPalette.map((color, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div
+                    className="w-20 h-20 rounded-full mx-auto mb-3 shadow-lg"
+                    style={{ backgroundColor: color.color }}
+                  ></div>
+                  <h4 className="font-medium text-vintage-white mb-1">{color.name}</h4>
+                  <p className="text-sm text-vintage-white/80">{color.description}</p>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
 
@@ -88,12 +92,12 @@ const DressCode: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           viewport={{ once: true }}
-          className="bg-rose bg-opacity-10 rounded-lg p-8 text-center mb-12"
+          className="bg-vintage-grey shadow-lg p-8 text-center mb-12"
         >
-          <h4 className="font-serif text-2xl text-charcoal mb-4">
+          <h4 className="font-serif text-2xl text-vintage-white mb-4">
             Colores a Evitar
           </h4>
-          <p className="text-charcoal mb-8">
+          <p className="text-vintage-white mb-8">
             Por favor eviten estos colores para mantener la armonía de nuestra paleta:
           </p>
 
@@ -123,7 +127,7 @@ const DressCode: React.FC = () => {
                   </div>
                 </div>
 
-                <h4 className="font-medium text-charcoal text-sm">{color.name}</h4>
+                <h4 className="font-medium text-vintage-white text-sm">{color.name}</h4>
               </motion.div>
             ))}
           </div>
@@ -137,24 +141,24 @@ const DressCode: React.FC = () => {
           viewport={{ once: true }}
           className="grid md:grid-cols-2 gap-8"
         >
-          <div className="bg-sage bg-opacity-10 rounded-lg p-6">
-            <h4 className="font-serif text-xl text-charcoal mb-4 flex items-center">
+          <div className="bg-vintage-grey shadow-lg p-6">
+            <h4 className="font-serif text-xl text-vintage-white mb-4 flex items-center">
               <span className="mr-2">🌴</span>
               Clima Tropical
             </h4>
-            <p className="text-charcoal">
-              Recuerden que estaremos en un clima cálido y húmedo. Elijan telas 
+            <p className="text-vintage-white">
+              Recuerden que estaremos en un clima cálido y húmedo. Elijan telas
               ligeras y transpirables que los mantengan frescos durante la celebración.
             </p>
           </div>
-          
-          <div className="bg-sage bg-opacity-10 rounded-lg p-6">
-            <h4 className="font-serif text-xl text-charcoal mb-4 flex items-center">
+
+          <div className="bg-vintage-grey shadow-lg p-6">
+            <h4 className="font-serif text-xl text-vintage-white mb-4 flex items-center">
               <span className="mr-2">👠</span>
               Calzado Cómodo
             </h4>
-            <p className="text-charcoal">
-              Parte de la celebración será al aire libre. Consideren zapatos 
+            <p className="text-vintage-white">
+              Parte de la celebración será al aire libre. Consideren zapatos
               cómodos que no se hundan en la arena o césped.
             </p>
           </div>
