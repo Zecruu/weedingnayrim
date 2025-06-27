@@ -12,11 +12,12 @@ An elegant, bilingual wedding website built with React, TypeScript, and Tailwind
 
 ## 🎨 Design
 
-### Color Palette
-- **Background**: #FAF6F2 (blush)
-- **Text**: #2F2F2F (deep charcoal)
-- **Accents**: #E2CFC3 (rose)
-- **Secondary**: #9CAF88 (sage green)
+### Color Palette (Updated to Monochromatic Theme)
+- **Background**: #FFFFFF (vintage white)
+- **Cards**: #4A4A4A (vintage grey)
+- **Text**: #FFFFFF (white on grey cards)
+- **Buttons**: #333333 (charcoal)
+- **Accents**: #FFFFFF (white decorative elements)
 
 ### Typography
 - **Headings**: Playfair Display (serif)
