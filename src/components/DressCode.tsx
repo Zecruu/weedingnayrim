@@ -17,7 +17,8 @@ const DressCode: React.FC = () => {
     { name: "Negro", color: "#000000" },
     { name: "Blanco puro", color: "#FFFFFF" },
     { name: "Rojo intenso", color: "#DC2626" },
-    { name: "Verde neón", color: "#00FF00" }
+    { name: "Neón", color: "#00FF00" },
+    { name: "Sequin", color: "#FFD700" }
   ]
 
   return (
@@ -101,7 +102,7 @@ const DressCode: React.FC = () => {
             Por favor eviten estos colores para mantener la armonía de nuestra paleta:
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {avoidColors.map((color, index) => (
               <motion.div
                 key={index}

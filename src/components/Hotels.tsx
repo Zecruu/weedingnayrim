@@ -54,6 +54,9 @@ const Hotels: React.FC = () => {
             Hemos seleccionado estos hoteles para que tengan opciones cómodas y convenientes
             durante su estadía en Bogotá.
           </p>
+          <p className="text-xl font-bold text-vintage-black max-w-2xl mx-auto mt-4">
+            Escoge uno de los dos
+          </p>
         </motion.div>
 
         {/* Hotels Grid */}
@@ -96,6 +99,21 @@ const Hotels: React.FC = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+
+              {/* Book Now Button */}
+              <div className="text-center">
+                <a
+                  href={index === 0
+                    ? "https://www.clickclackhotel.com/en/hotels/colombia/medellin/clickclackmedellin/?gclid=8943f7dbaa1a19b1063f9f848f1957c5&gclsrc=3p.ds&gad_source=7"
+                    : "https://www.booking.com/index.en-gb.html?label=msn-LXsJga95E*bNvtpzYeLIjw-80676815398188%3Atikwd-80676969432379%3Aloc-154%3Aneo%3Amte%3Alp154%3Adec%3AqsHOTEL+ESTELAR+PARQUE+DE+LA+93&sid=f1d22e5a869bf244d807b478333fff82&utm_source=bing&utm_medium=cpc&utm_term=LXsJga95E*bNvtpzYeLIjw&utm_campaign=Hotel+-+Colombia&aid=2276372"
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-vintage-black text-vintage-white px-8 py-3 font-medium hover:bg-vintage-charcoal transition-colors duration-300 inline-block"
+                >
+                  Reservar Ahora
+                </a>
               </div>
 
             </motion.div>

@@ -208,8 +208,7 @@ const Itinerary: React.FC = () => {
                 Regalos
               </h5>
               <p className="text-vintage-white text-base leading-relaxed">
-                Su presencia es nuestro regalo más preciado. Si desean
-                obsequiarnos algo, habrá una mesa designada en la recepción.
+                Nos puedes regalar dinero por ATH Movil o comprar regalos de nuestro Amazon Wishlist.
               </p>
             </div>
           </div>

@@ -81,7 +81,7 @@ const Flights: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-vintage-charcoal p-8 shadow-lg"
+                className="bg-vintage-grey p-8 shadow-lg"
               >
                 <div className="text-center mb-6">
                   <h4 className="font-serif text-2xl text-vintage-white mb-2">VUELOS DE IDA</h4>
@@ -122,7 +122,7 @@ const Flights: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="bg-vintage-charcoal p-8 shadow-lg"
+                className="bg-vintage-grey p-8 shadow-lg"
               >
                 <div className="text-center mb-6">
                   <h4 className="font-serif text-2xl text-vintage-white mb-2">VUELOS DE VUELTA</h4>

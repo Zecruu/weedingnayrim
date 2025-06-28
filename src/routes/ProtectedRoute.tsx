@@ -7,7 +7,7 @@ interface ProtectedRouteProps {
 
 const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
   const accessCode = localStorage.getItem('weddingAccessCode')
-  const validCode = 'yestoforeeveR'
+  const validCode = 'yestoforeveR'
   
   // Check if the stored code matches the valid code
   if (accessCode !== validCode) {

@@ -8,7 +8,7 @@ const AccessPage: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false)
   const navigate = useNavigate()
   
-  const validCode = 'yestoforeeveR'
+  const validCode = 'yestoforeveR'
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
