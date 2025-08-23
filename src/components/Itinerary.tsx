@@ -55,7 +55,7 @@ const Itinerary: React.FC = () => {
           {/* Decorative vintage border */}
           <div className="p-8 mx-auto max-w-2xl bg-vintage-grey shadow-lg">
             <div className="border border-vintage-white/20 p-6">
-              <h2 className="font-serif text-5xl lg:text-6xl text-vintage-white mb-6 tracking-wide">
+              <h2 className="font-script text-5xl lg:text-6xl text-vintage-white mb-6 tracking-wide">
                 Itinerario
               </h2>
               <div className="flex justify-center mb-8">
@@ -67,6 +67,23 @@ const Itinerary: React.FC = () => {
                 ¡Prepárense para momentos inolvidables!
               </p>
             </div>
+          </div>
+        </motion.div>
+
+        {/* Additional Image Below Itinerary Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <div className="max-w-4xl mx-auto">
+            <img 
+              src="/images/N&S-57.jpg" 
+              alt="Steven & Nayrim" 
+              className="w-full h-auto shadow-2xl rounded-lg"
+            />
           </div>
         </motion.div>
 
@@ -158,7 +175,7 @@ const Itinerary: React.FC = () => {
           <div className="absolute -bottom-2 -left-2 w-8 h-8 bg-vintage-white rotate-45"></div>
           <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-vintage-white rotate-45"></div>
 
-          <h4 className="font-serif text-3xl text-vintage-white mb-8 text-center tracking-wide">
+          <h4 className="font-script text-4xl text-vintage-white mb-8 text-center tracking-wide">
             Notas Importantes
           </h4>
           <div className="flex justify-center mb-10">
@@ -213,6 +230,7 @@ const Itinerary: React.FC = () => {
             </div>
           </div>
         </motion.div>
+
       </div>
     </section>
   )

@@ -55,7 +55,7 @@ const Recommendations: React.FC = () => {
           className="text-center mb-16"
         >
           <div className="bg-vintage-grey shadow-2xl p-8 mx-auto max-w-2xl">
-            <h2 className="font-serif text-4xl lg:text-5xl text-vintage-white mb-6">
+            <h2 className="font-script text-4xl lg:text-5xl text-vintage-white mb-6">
               Recomendaciones Locales
             </h2>
             <div className="flex justify-center mb-8">
@@ -78,7 +78,7 @@ const Recommendations: React.FC = () => {
           viewport={{ once: true }}
           className="bg-vintage-grey shadow-lg p-8 mb-16"
         >
-          <h3 className="font-serif text-3xl text-vintage-white text-center mb-8">
+          <h3 className="font-script text-4xl text-vintage-white text-center mb-8">
             Recomendaciones Importantes
           </h3>
 
@@ -107,7 +107,7 @@ const Recommendations: React.FC = () => {
           className="mb-16"
         >
           <div className="bg-vintage-grey shadow-lg p-8">
-            <h3 className="font-serif text-3xl text-vintage-white text-center mb-8">
+            <h3 className="font-script text-4xl text-vintage-white text-center mb-8">
               Restaurantes Recomendados
             </h3>
 
@@ -143,7 +143,7 @@ const Recommendations: React.FC = () => {
           className="mb-16"
         >
           <div className="bg-vintage-grey shadow-lg p-8">
-            <h3 className="font-serif text-3xl text-vintage-white text-center mb-8">
+            <h3 className="font-script text-4xl text-vintage-white text-center mb-8">
               Lugares de Interés
             </h3>
 

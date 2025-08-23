@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="font-serif text-4xl lg:text-5xl mb-6">
+            <h2 className="font-script text-4xl lg:text-5xl mb-6">
               Gracias por Acompañarnos
             </h2>
             <div className="flex justify-center mb-8">

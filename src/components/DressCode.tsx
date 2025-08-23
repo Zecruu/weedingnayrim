@@ -61,7 +61,7 @@ const DressCode: React.FC = () => {
           className="mb-16"
         >
           <div className="bg-vintage-grey shadow-lg p-8">
-            <h3 className="font-serif text-3xl text-vintage-white text-center mb-8">
+            <h3 className="font-script text-4xl text-vintage-white text-center mb-8">
               Paleta de Colores Sugerida
             </h3>
 
@@ -95,7 +95,7 @@ const DressCode: React.FC = () => {
           viewport={{ once: true }}
           className="bg-vintage-grey shadow-lg p-8 text-center mb-12"
         >
-          <h4 className="font-serif text-2xl text-vintage-white mb-4">
+          <h4 className="font-script text-3xl text-vintage-white mb-4">
             Colores a Evitar
           </h4>
           <p className="text-vintage-white mb-8">
@@ -148,8 +148,9 @@ const DressCode: React.FC = () => {
               Clima Tropical
             </h4>
             <p className="text-vintage-white">
-              Recuerden que estaremos en un clima cálido y húmedo. Elijan telas
-              ligeras y transpirables que los mantengan frescos durante la celebración.
+              Recuerden que estaremos en un clima fresco (50-60°F). Elijan telas
+              ligeras y transpirables que los mantengan cómodos durante la celebración.
+              La ceremonia es parte al aire libre.
             </p>
           </div>
 

@@ -71,7 +71,7 @@ const Flights: React.FC = () => {
           className="mb-16"
         >
           <div className="bg-vintage-grey shadow-lg p-8">
-            <h3 className="font-serif text-3xl text-vintage-white mb-8 text-center">
+            <h3 className="font-script text-4xl text-vintage-white mb-8 text-center">
               Vuelos de Ida
             </h3>
 
@@ -112,7 +112,7 @@ const Flights: React.FC = () => {
           className="mb-12"
         >
           <div className="bg-vintage-grey shadow-lg p-8">
-            <h3 className="font-serif text-3xl text-vintage-white mb-8 text-center">
+            <h3 className="font-script text-4xl text-vintage-white mb-8 text-center">
               Vuelos de Vuelta
             </h3>
 
@@ -148,7 +148,7 @@ const Flights: React.FC = () => {
           viewport={{ once: true }}
           className="bg-vintage-grey shadow-lg p-8 text-center"
         >
-          <h4 className="font-serif text-2xl text-vintage-white mb-4">
+          <h4 className="font-script text-3xl text-vintage-white mb-4">
             Consejos de Viaje
           </h4>
           <div className="grid md:grid-cols-2 gap-6 text-left">

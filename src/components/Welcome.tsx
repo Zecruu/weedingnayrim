@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
 
 const Welcome: React.FC = () => {
   return (
@@ -17,7 +16,15 @@ const Welcome: React.FC = () => {
           className="text-center max-w-5xl mx-auto"
         >
           {/* Vintage Welcome Card */}
-          <div className="bg-vintage-grey shadow-2xl p-12 relative">
+          <div 
+            className="shadow-2xl p-12 relative"
+            style={{
+              backgroundImage: 'url(/images/N&S-44.jpg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center top',
+              backgroundRepeat: 'no-repeat'
+            }}
+          >
             {/* Decorative vintage corners */}
             <div className="absolute top-4 left-4 w-8 h-8 border-l-4 border-t-4 border-vintage-white/40"></div>
             <div className="absolute top-4 right-4 w-8 h-8 border-r-4 border-t-4 border-vintage-white/40"></div>
