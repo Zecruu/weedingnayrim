@@ -22,7 +22,7 @@ const DressCode: React.FC = () => {
   ]
 
   return (
-    <section className="section-padding bg-vintage-white">
+    <section id="dress-code" className="section-padding bg-vintage-white">
       <div className="container-max">
         {/* Header */}
         <motion.div

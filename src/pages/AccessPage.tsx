@@ -18,7 +18,7 @@ const AccessPage: React.FC = () => {
     // Simulate a brief loading state for better UX
     await new Promise(resolve => setTimeout(resolve, 800))
     
-    if (code === validCode) {
+    if (code.toLowerCase() === validCode.toLowerCase()) {
       localStorage.setItem('weddingAccessCode', code)
       navigate('/', { replace: true })
     } else {

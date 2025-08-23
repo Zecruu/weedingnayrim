@@ -1,4 +1,5 @@
 import React from 'react'
+import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import RsvpCallToAction from './components/RsvpCallToAction'
 import Welcome from './components/Welcome'
@@ -16,6 +17,7 @@ function App() {
       <div className="absolute inset-0 opacity-5 bg-gradient-to-br from-vintage-grey via-transparent to-vintage-dark-grey pointer-events-none"></div>
 
       <div className="relative z-10">
+        <Navbar />
         <Hero />
         <RsvpCallToAction />
         <Welcome />

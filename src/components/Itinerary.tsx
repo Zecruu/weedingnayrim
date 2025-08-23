@@ -39,7 +39,7 @@ const Itinerary: React.FC = () => {
   ]
 
   return (
-    <section className="section-padding bg-vintage-white relative">
+    <section id="itinerary" className="section-padding bg-vintage-white relative">
       {/* Vintage paper texture */}
       <div className="absolute inset-0 opacity-10 bg-gradient-to-br from-vintage-grey via-transparent to-vintage-dark-grey"></div>
 

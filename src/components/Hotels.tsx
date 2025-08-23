@@ -30,7 +30,7 @@ const Hotels: React.FC = () => {
   ]
 
   return (
-    <section className="section-padding bg-vintage-white">
+    <section id="hotels" className="section-padding bg-vintage-white">
       <div className="container-max">
         {/* Header */}
         <motion.div

@@ -39,6 +39,16 @@
     @apply px-4 sm:px-6 lg:px-8 py-20 lg:py-32;
   }
 
+  .hero-section {
+    background-position: 50% 28%;
+  }
+
+  @media (max-width: 768px) {
+    .hero-section {
+      background-position: 50% 40%;
+    }
+  }
+
   .container-max {
     @apply max-w-7xl mx-auto;
   }

@@ -3,18 +3,17 @@ import { motion } from 'framer-motion'
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src="/images/NayrimSteven.png"
-          alt="Nayrim & Steven"
-          className="w-full h-full object-cover object-center"
-          style={{
-            filter: 'sepia(0.3) contrast(1.1) brightness(0.95) saturate(0.8)',
-          }}
-        />
-      </div>
+    <section 
+      className="relative flex items-center justify-center overflow-hidden hero-section"
+      style={{
+        minHeight: 'calc(100vh - 64px)',
+        backgroundImage: 'url(/images/NayrimAndSteven.jpg)',
+        backgroundSize: 'cover',
+        backgroundPosition: '50% 28%',
+        backgroundRepeat: 'no-repeat',
+        filter: 'sepia(0.3) contrast(1.1) brightness(0.95) saturate(0.8)',
+      }}
+    >
 
       {/* Vintage Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-vintage-black/10 via-transparent to-vintage-grey/20" />

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const RsvpCallToAction: React.FC = () => {
   return (
-    <section className="section-padding bg-vintage-white relative overflow-hidden">
+    <section id="rsvp" className="section-padding bg-vintage-white relative overflow-hidden">
       {/* Vintage paper texture */}
       <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-vintage-grey via-transparent to-vintage-gold"></div>
 
