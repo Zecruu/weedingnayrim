@@ -144,8 +144,8 @@ const DressCode: React.FC = () => {
         >
           <div className="bg-vintage-grey shadow-lg p-6">
             <h4 className="font-serif text-xl text-vintage-white mb-4 flex items-center">
-              <span className="mr-2">🌴</span>
-              Clima Tropical
+              <span className="mr-2">❄️</span>
+              Clima Fresco
             </h4>
             <p className="text-vintage-white">
               Recuerden que estaremos en un clima fresco (50-60°F). Elijan telas

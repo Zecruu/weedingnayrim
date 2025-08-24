@@ -31,7 +31,6 @@ const RsvpCallToAction: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="text-6xl mb-6">💌</div>
               
               <h2 className="font-script text-4xl lg:text-5xl text-vintage-white mb-6 tracking-wide">
                 ¡Confirma tu Asistencia!
@@ -62,7 +61,7 @@ const RsvpCallToAction: React.FC = () => {
                     boxShadow: '0 12px 24px rgba(0, 0, 0, 0.5)'
                   }}
                 >
-                  ✨ Confirmar Ahora ✨
+                  Confirmar Ahora
                 </Link>
               </motion.div>
 
