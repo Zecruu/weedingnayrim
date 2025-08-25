@@ -122,4 +122,9 @@
   .border-b-3 {
     border-bottom-width: 3px;
   }
+
+  /* 3D perspective for book animation */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
 }

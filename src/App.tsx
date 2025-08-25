@@ -8,6 +8,7 @@ import Flights from './components/Flights'
 import DressCode from './components/DressCode'
 import Itinerary from './components/Itinerary'
 import Recommendations from './components/Recommendations'
+import PhotoBook from './components/PhotoBook'
 import Footer from './components/Footer'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <DressCode />
         <Itinerary />
         <Recommendations />
+        <PhotoBook />
         <Footer />
       </div>
     </div>

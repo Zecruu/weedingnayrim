@@ -165,6 +165,53 @@ const DressCode: React.FC = () => {
             </p>
           </div>
         </motion.div>
+
+        {/* Beauty Salon Recommendations */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+          viewport={{ once: true }}
+          className="mt-16"
+        >
+          <div className="bg-vintage-grey shadow-lg p-8">
+            <h3 className="font-script text-3xl text-vintage-white mb-8 text-center">
+              Recomendaciones de Salones de Belleza
+            </h3>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Praga Salon */}
+              <div className="text-center p-6 bg-vintage-white/10 rounded-lg">
+                <h4 className="font-serif text-xl text-vintage-white mb-3">
+                  Praga Salon
+                </h4>
+                <p className="text-vintage-white/80">
+                  Instagram: <span className="font-medium">@pragasalon1</span>
+                </p>
+              </div>
+
+              {/* Sovrano Hair Care */}
+              <div className="text-center p-6 bg-vintage-white/10 rounded-lg">
+                <h4 className="font-serif text-xl text-vintage-white mb-3">
+                  Sovrano Hair Care
+                </h4>
+                <p className="text-vintage-white/80">
+                  Instagram: <span className="font-medium">@sovranohaircare</span>
+                </p>
+              </div>
+
+              {/* Brulee Love For Hair */}
+              <div className="text-center p-6 bg-vintage-white/10 rounded-lg">
+                <h4 className="font-serif text-xl text-vintage-white mb-3">
+                  Brulee Love For Hair
+                </h4>
+                <p className="text-vintage-white/80">
+                  Instagram: <span className="font-medium">@bruleeloveforhair</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   )

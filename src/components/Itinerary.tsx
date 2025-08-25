@@ -10,7 +10,7 @@ const Itinerary: React.FC = () => {
         {
           time: "1PM",
           title: "WELCOME BRUNCH!",
-          location: "LOCATION: --------",
+          location: "LOCATION: To be announced",
           description: "",
           icon: "🥂"
         }
@@ -28,7 +28,7 @@ const Itinerary: React.FC = () => {
           icon: "💍"
         },
         {
-          time: "",
+          time: "3:45PM",
           title: "WEDDING DAY!",
           location: "LOCATION: LA BELLA TOSCANA",
           description: "",
@@ -219,15 +219,6 @@ const Itinerary: React.FC = () => {
               </p>
             </div>
 
-            <div className="border-l-4 border-vintage-white/30 pl-6">
-              <h5 className="font-serif text-xl text-vintage-white mb-4 flex items-center">
-                <span className="mr-3 text-2xl">🎁</span>
-                Regalos
-              </h5>
-              <p className="text-vintage-white text-base leading-relaxed">
-                Nos puedes regalar dinero por ATH Movil o comprar regalos de nuestro Amazon Wishlist.
-              </p>
-            </div>
           </div>
         </motion.div>
 
