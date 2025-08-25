@@ -9,6 +9,7 @@ import DressCode from './components/DressCode'
 import Itinerary from './components/Itinerary'
 import Recommendations from './components/Recommendations'
 import PhotoBook from './components/PhotoBook'
+import ThankYou from './components/ThankYou'
 import Footer from './components/Footer'
 
 function App() {
@@ -27,7 +28,9 @@ function App() {
         <DressCode />
         <Itinerary />
         <Recommendations />
-        <PhotoBook />
+        {/* Place these two just above the footer */}
+        <ThankYou />
+        <PhotoBook useTransparentBackground compact />
         <Footer />
       </div>
     </div>

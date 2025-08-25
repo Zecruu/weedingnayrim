@@ -26,7 +26,8 @@ const Navbar: React.FC = () => {
     { label: 'Confirmar', id: 'rsvp' },
     { label: 'Alojamiento', id: 'hotels' },
     { label: 'Vestimenta', id: 'dress-code' },
-    { label: 'Itinerario', id: 'itinerary' }
+    { label: 'Itinerario', id: 'itinerary' },
+    { label: 'Fotos', id: 'photos' },
   ]
 
   return (

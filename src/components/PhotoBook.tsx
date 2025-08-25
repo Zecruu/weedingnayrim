@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 interface PhotoBookProps {
   photos?: string[]
+  useTransparentBackground?: boolean
+  compact?: boolean
 }
 
 const PhotoBook: React.FC<PhotoBookProps> = ({
@@ -11,7 +13,9 @@ const PhotoBook: React.FC<PhotoBookProps> = ({
     '/images/N&S-44.jpg',
     '/images/N&S-57.jpg',
     // Add more photos here as needed
-  ]
+  ],
+  useTransparentBackground = false,
+  compact = false,
 }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [currentPage, setCurrentPage] = useState(0)
@@ -67,9 +71,10 @@ const PhotoBook: React.FC<PhotoBookProps> = ({
       opacity: 0,
     }),
   }
+  const sectionPadding = compact ? 'py-10 px-4' : 'section-padding'
 
   return (
-    <section className="section-padding bg-vintage-white relative overflow-visible">
+    <section id="photos" className={`${sectionPadding} ${useTransparentBackground ? '' : 'bg-vintage-white'} relative overflow-visible`}>
       <div className="container-max">
         <div className="flex justify-center items-center min-h-[560px] py-16 mb-24">
 
