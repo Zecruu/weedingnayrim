@@ -40,7 +40,7 @@ const PhotoBook: React.FC<PhotoBookProps> = ({
   return (
     <section className="section-padding bg-vintage-white relative overflow-hidden">
       <div className="container-max">
-        <div className="flex justify-center items-center min-h-[60vh] py-8">
+        <div className="flex justify-center items-center min-h-[50vh] py-16 mb-16">
           
           {/* Book Container */}
           <div className="relative perspective-1000">
@@ -117,11 +117,11 @@ const PhotoBook: React.FC<PhotoBookProps> = ({
                   style={{ transformStyle: 'preserve-3d' }}
                 >
                   {/* Book Base */}
-                  <div className="flex shadow-2xl">
+                  <div className="flex shadow-2xl flex-col md:flex-row">
                     
                     {/* Left Page */}
                     <motion.div 
-                      className="w-96 h-[500px] bg-vintage-grey border border-vintage-grey/20 relative overflow-hidden"
+                      className="w-full md:w-96 h-[300px] md:h-[500px] bg-vintage-grey border border-vintage-grey/20 relative overflow-hidden"
                       key={`left-${currentPage}`}
                       initial={{ rotateY: -5 }}
                       animate={{ rotateY: 0 }}
@@ -147,11 +147,11 @@ const PhotoBook: React.FC<PhotoBookProps> = ({
                     </motion.div>
 
                     {/* Book Spine */}
-                    <div className="w-4 bg-gradient-to-b from-vintage-grey to-vintage-dark-grey shadow-inner"></div>
+                    <div className="w-4 h-4 md:w-4 md:h-auto bg-gradient-to-b from-vintage-grey to-vintage-dark-grey shadow-inner"></div>
 
                     {/* Right Page */}
                     <motion.div 
-                      className="w-96 h-[500px] bg-vintage-grey border border-vintage-grey/20 relative overflow-hidden"
+                      className="w-full md:w-96 h-[300px] md:h-[500px] bg-vintage-grey border border-vintage-grey/20 relative overflow-hidden"
                       key={`right-${currentPage}`}
                       initial={{ rotateY: 5 }}
                       animate={{ rotateY: 0 }}
