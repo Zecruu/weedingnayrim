@@ -21,7 +21,7 @@ const ThankYou: React.FC<PropsWithChildren> = ({ children }) => {
             viewport={{ once: true }}
           >
             <h2 className="font-script text-4xl lg:text-5xl mb-6">
-              ¡Que Comienza la Fiesta!
+              ¡Que Comience la fiesta!
             </h2>
             <div className="flex justify-center mb-8">
               <div className="w-24 h-px bg-vintage-white"></div>
